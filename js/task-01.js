@@ -9,9 +9,6 @@ for (let item of liItemEl) {
     console.log("element:", item.lastElementChild.children.length);
 }
 
-// for (let element of textEl) {
-//     console.log(element);
-// }
 
 
 
