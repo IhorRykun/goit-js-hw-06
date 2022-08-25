@@ -1,17 +1,10 @@
-const catEl = document.querySelector("#categories");
-const catElChildEl = catEl.children;
-// console.log(catEl);
-console.log(`Number of categories:`, catElChildEl.length);
+const catEl = document.querySelectorAll('.item');
+console.log(`Number of categories:`, catEl.length);
 
-const liItemEl = catElChildEl;
-for (let item of liItemEl) {
-    console.log("category:", item.firstElementChild.textContent);
-    console.log("element:", item.lastElementChild.children.length);
-}
-
-
-
-
+catEl.forEach(function (categories) {
+    console.log(`Category:`, categories.firstElementChild.textContent);
+    console.log(`Elements:`, categories.lastElementChild.children.length);
+});
 
 
 
