@@ -7,15 +7,9 @@ function onClickForm(event) {
     const elementForm = event.currentTarget.elements;
     const mail = elementForm.email.value;
     const password = elementForm.password.value;
-    if (mail === '') {
-        alert('warning mail');
-    } else if (password === '') {
-          alert('warning password');
-    } event.currentTarget.reset();
-    const formDataEl = {
-        mail,
-        password,
-    };
-    console.log(formDataEl);
-
-}
+    if (mail === '' || password === '') {
+        event.currentTarget.reset();
+        return alert(`warning: correct maill and password`);
+    }
+    console.log(`email:${mail}, password ${password}`);
+    }
