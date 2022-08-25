@@ -14,11 +14,11 @@ const images = [
 ];
 
 
-const galleryEl = document.querySelector(".gallery");
+const galleryEl = document.querySelector('.gallery');
 const masEl = [];
 
 for (const el of images) {
-    const someEl = galleryEl.insertAdjacentHTML('beforeend', `<i><img src='${el.url}', alt='${el.alt}' width = "640", height = "480"></li>`);
-    masEl.push(someEl);
+    const listEl = galleryEl.insertAdjacentHTML('beforeend', `<i><img src='${el.url}', alt='${el.alt}' width = "640", height = "480"></li>`);
+    masEl.push(listEl);
 }
 galleryEl.style.cssText = 'display:flex; align-item:center;';
