@@ -14,18 +14,28 @@ const images = [
 ];
 
 
-const galleryEl = document.querySelector('.gallery');
-const masEl = [];
 
-for (const el of images) {
-    const listEl = galleryEl.insertAdjacentHTML('beforeend', `<li class="img__item"><img src='${el.url}', alt='${el.alt}' width = "640", height = "480"></li>`);
-    masEl.push(listEl);
-}
-galleryEl.style.cssText = 'display:flex; align-item:center;list-style:none';
+const galleryEl = document.querySelector(".gallery");
+const imagesEl = images.map(img => {
+    const listEl = galleryEl.insertAdjacentHTML(
+        "beforeend",
+        `<li class="img__item"><img src='${img.url}', alt='${img.alt}' width = "640", height = "480"></li>`);
+    return listEl;
+});
+galleryEl.style.cssText = 'display:flex';
 
-console.log(galleryEl);
+// const galleryEl = document.querySelector('.gallery');
+// const masEl = [];
 
-galleryEl.append("listEl");
+// for (const el of images) {
+//     const listEl = galleryEl.insertAdjacentHTML('beforeend', `<li class="img__item"><img src='${el.url}', alt='${el.alt}' width = "640", height = "480"></li>`);
+//     masEl.push(listEl);
+// }
+// galleryEl.style.cssText = 'display:flex; align-item:center;list-style:none';
 
-const itemImg = document.querySelectorAll(".img__item");
-console.log(itemImg);
+// console.log(galleryEl);
+
+// galleryEl.append("listEl");
+
+// const itemImg = document.querySelectorAll(".img__item");
+// console.log(itemImg);
