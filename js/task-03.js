@@ -20,8 +20,9 @@ const imagesEl = images.map(img => {
     const listEl = (`<li class="img__item"><img src='${img.url}', alt='${img.alt}' width = "640", height = "480"></li>`);
     return listEl;
 });
-galleryEl.insertAdjacentHTML('beforeend','listEl');
-galleryEl.style.cssText = 'display:flex';
+
+galleryEl.insertAdjacentHTML('beforeend', imagesEl).join('');
+
 
 // const galleryEl = document.querySelector('.gallery');
 // const masEl = [];
