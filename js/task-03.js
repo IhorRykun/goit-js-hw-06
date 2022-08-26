@@ -17,11 +17,10 @@ const images = [
 
 const galleryEl = document.querySelector(".gallery");
 const imagesEl = images.map(img => {
-    const listEl = galleryEl.insertAdjacentHTML(
-        "beforeend",
-        `<li class="img__item"><img src='${img.url}', alt='${img.alt}' width = "640", height = "480"></li>`);
+    const listEl = (`<li class="img__item"><img src='${img.url}', alt='${img.alt}' width = "640", height = "480"></li>`);
     return listEl;
 });
+galleryEl.insertAdjacentHTML('beforeend','listEl');
 galleryEl.style.cssText = 'display:flex';
 
 // const galleryEl = document.querySelector('.gallery');
